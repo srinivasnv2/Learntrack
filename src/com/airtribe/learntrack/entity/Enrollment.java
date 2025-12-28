@@ -1,0 +1,38 @@
+package com.airtribe.learntrack.entity;
+
+import java.time.LocalDate;
+
+public class Enrollment {
+
+    private int id;
+    private int studentId;
+    private int courseId;
+    private LocalDate enrollmentDate;
+    private String status;
+
+    public Enrollment(int id, int studentId, int courseId) {
+        this.id = id;
+        this.studentId = studentId;
+        this.courseId = courseId;
+        this.enrollmentDate = LocalDate.now();
+        this.status = "ACTIVE";
+    }
+
+    // ✅ REQUIRED BY Main.java
+    public int getId() {
+        return id;
+    }
+
+    public int getStudentId() {
+        return studentId;
+    }
+
+    // ✅ REQUIRED BY Main.java
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+}
